@@ -51,9 +51,22 @@ export default function App() {
             <li
               key={index}
               onClick={() => emojiClickHandler(emoji)}
-              style={{ cursor: "pointer", display: "inline", margin: "8px" }}
+              style={{
+                cursor: "pointer",
+                display: "inline",
+                margin: "10px"
+              }}
             >
-              {emoji}
+              <span
+                style={{
+                  fontSize: "2rem",
+                  padding: "0.5rem",
+                  marginRight: "2rem",
+                  marginInlineStart: "0px"
+                }}
+              >
+                {emoji}
+              </span>
             </li>
           );
         })}
