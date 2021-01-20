@@ -36,7 +36,9 @@ export default function App() {
 
   return (
     <div className="App">
+      <h1 style={{ color: "purple" }}>Emoji translator app</h1>
       <input
+        placeholder="Put an emoji here to know the meaning"
         onChange={inputChangeHandler}
         style={{ padding: "1rem", width: "80%" }}
       ></input>
@@ -44,9 +46,10 @@ export default function App() {
       <div style={{ padding: "1rem", fontWeight: "bold" }}>{emojiMeaning}</div>
 
       <ul style={{ listStyle: "none" }}>
-        {emojiArray.map(function (emoji) {
+        {emojiArray.map(function (emoji, index) {
           return (
             <li
+              key={index}
               onClick={() => emojiClickHandler(emoji)}
               style={{ cursor: "pointer", display: "inline", margin: "8px" }}
             >
